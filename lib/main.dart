@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restaurant_ziro/navigation.dart';
 import 'package:restaurant_ziro/presentation/detail_page.dart';
 import 'package:restaurant_ziro/presentation/search_page.dart';
 
@@ -16,6 +17,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      navigatorKey: navigatorKey,
+      initialRoute: homePageRoute,
       routes: {
         homePageRoute: (context) => const HomePage(),
         detailRestaurantPageRoute: (context) => const DetailPage(),
